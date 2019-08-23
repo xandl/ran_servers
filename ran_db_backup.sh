@@ -9,7 +9,7 @@ if [ ! -f /etc/cron.d/ran_backup ]; then
     echo "SHELL=/bin/bash" > /etc/cron.d/ran_backup
     echo "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" >> /etc/cron.d/ran_backup
     echo "MAILTO=root" >> /etc/cron.d/ran_backup
-    echo "1 6,18 * * * root "$(realpath $0)  >> /etc/cron.d/ran_backup
+    echo "1 6,18 * * * root "$(realpath $0)" > /dev/null"  >> /etc/cron.d/ran_backup
     echo "" >> /etc/cron.d/ran_backup
 fi
 mkdir -p $WORK
